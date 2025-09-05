@@ -19,6 +19,9 @@ const swaggerOptions = {
     },
     servers: [
       {
+        url: "https://weather-api-7pzt.onrender.com",
+      },
+      {
         url: "http://localhost:3000",
       },
     ],
