@@ -23,7 +23,8 @@ async function getCurrentWeather(req, res) {
     const weatherResponse = await axios.get(weatherUrl);
     console.log(weatherResponse.data);
     res.json({
-      location: `${name}, ${country}`,
+      location: `${name}`,
+      country: `${country}`,
       coordinates: { lat, lon },
       temperature: weatherResponse.data.main.temp,
       feels_like: weatherResponse.data.main.feels_like,
@@ -55,7 +56,8 @@ async function getWeatherForecast(req, res) {
     }));
 
     res.json({
-      location: `${name}, ${country}`,
+      location: `${name}`,
+      country: `${country}`,
       coordinates: { lat, lon },
       forecast: forecastData,
     });
